@@ -246,7 +246,7 @@ if(currentBlock.ThisBlockID == 21) // The Sewers Level
   LavaLevel_Background.SetActive(false);
   LavaLevel_Content.SetActive(false);
   SideEntrance_Background.SetActive(false);
-  SideEntrance_Background.SetActive(false);
+  SideEntrance_Content.SetActive(false);
   SewersLevel_Background.SetActive(true);
   SewersLevel_Content.SetActive(true);
   
@@ -258,7 +258,7 @@ if(currentBlock.ThisBlockID == 19) // Side Entrance Level
   SewersLevel_Background.SetActive(false);
   SewersLevel_Content.SetActive(false);
   SideEntrance_Background.SetActive(true);
-  SideEntrance_Background.SetActive(true);
+  SideEntrance_Content.SetActive(true);
 }
 
 //////////////////////////////////////////////////////////////////////////////////////////
@@ -499,7 +499,7 @@ private void HourGlassVariablesReset()
 {   
     Invoke("CloseYesNoPanels", 0);
     Invoke("ClosingUIPanels", 0);
-    Invoke("ShoeButtonSetActive", 5);       // Make "shoe" icon clickable again
+    Invoke("ShoeButtonSetActive", 0);       // Make "shoe" icon clickable again
     Option1Votes = 0;                       // Set votes value back to 0
     Option2Votes = 0;
     Option3Votes = 0;
@@ -695,7 +695,7 @@ public class StoryBlock {
     /* 27*/     new StoryBlock(27, "You pull a shimmering ring out of your pocket. The goblin struggles to keep his balance at the sight of the ring (that's right, he doesn't crawl anymore). It tells you that the fastest way to the fortress is through the northern entrance. Considering that you have only seen one long corridor so far, this answer seems very puzzling. After all, you thank the goblin and move on.", "March on", "March on", "March on"," ", 30, 30, 30),       //27                                                                                                                                                //27
     /* 28*/     new StoryBlock(28, "The Goblin looked at you in surprise - after all, it would be very profitable for the two of you to do so. You see him slowly retreat into a hole in the floor and disappear...", "March on", "March on", "March on"," ", 30, 30, 30),
     /* 29*/     new StoryBlock(29, "The Goblin is watching you intently... You see him walking slowly, sniffing the leg of your pants, only to quickly retreat and disappear somewhere in a hole in the floor...", "March on", "March on", "March on"," ", 30, 30, 30),
-    /* 30*/     new StoryBlock(30, "This is where the story ends... written by the author. Because certainly not the one experienced by our heroes! If you want to see what the alternative entrance looks like, vote for this option at the bottom! Thank you player for choosing to play this demo!", "(Come back to the lava moutains)", "(Go visit The Side Entrance)", ". . .","March on", 0, 29, 30),
+    /* 30*/     new StoryBlock(30, "This is where the story ends... written by the author. Because certainly not the one experienced by our heroes! If you want to see what the alternative entrance looks like, vote for this option at the bottom! Thank you player for choosing to play this demo!", "(Come back to the lava moutains)", "(Go visit The Side Entrance)", ". . .","March on", 0, 19, 30),
 ////////////////////////////////////////////////////////////////////// SIDE ENTRANCE LEVEL ///////////////////////////////////////////////////////////////////////////////
     /* 31*/     new StoryBlock(31, "You go up the stairs. There are many more steps than you thought. Upstairs you are greeted by a creaking door that opens without any problem. You are on the walls on the east side of the fortress. The main square seems deserted, you can see the training equipment left on it. Your attention is drawn to the tallest of the fortress towers - perhaps this is where you should go? But for now what you need to find the any entrance...", "Look at the main square", "Look to the right, beyond the fortress", "Take a look at the tallest tower","Go upstairs", 32, 33, 34), // 31
     /* 32*/     new StoryBlock(32, "On the square there are a lot of training puppets and a lot of crates under cover. You have a feeling that there is a weapon in them. In the middle of the square on a small hill there is a strip. It has long looked unused. Strange...", "Continue walking on the walls...", "Continue walking on the walls...", "Continue walking on the walls...","Look at the main square", 39, 39, 39), // 32
@@ -966,7 +966,7 @@ private void ResetVotesAndButtonsUI()
     StopCoroutine(Timer);                               // Stop HourGlass Coroutine
     NumberGenForDecision();                             // Generate a RandomNumber to randomize the next decision.
     NumberGenForItems();                                // Generate  new RandomNumberChanceToDropAnItem, basically a drop chance for an item each time the voting is finished
-    Invoke("ShoeButtonSetActive", 5);                   // We can click shoe icon again
+    Invoke("ShoeButtonSetActive", 0);                   // We can click shoe icon again
     Invoke("ClosingUIPanels", 0);                       // Close other UI Panels
     Invoke("CloseYesNoPanels", 0);
 }

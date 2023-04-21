@@ -1,9 +1,13 @@
 
 # Multiplayer-Text-Game
 
-Unity Multiplayer Game(Short video) - https://youtu.be/G2mL8aH0m7Y        (08.03.2023)
+Unity Multiplayer Game(Short video) - https://youtu.be/17t1AUGh1BU       (13.04.2023)
 
-Unity Multiplayer Game(Full presentation) - https://youtu.be/_EdskhqTgnc  (08.03.2023)
+Unity Multiplayer Game(Full explanation of game mechanics) - https://youtu.be/_EdskhqTgnc  (08.03.2023)
+
+Download this game from GoogleDrive: https://drive.google.com/file/d/1ATQlBRSxyVqkpJE2LLHPhpZQn9nlihjP/view (1GB of storage required)
+
+Multiplayer lobby system available at Asset Store: waiting for Unity Team to confirm the asset
 
 <code>1. DESCRIPTION:</code><br><br> A game created with the Unity Engine using the Mirror asset for network connections.
                 <br>It is a text-based game in which the collective decisions of the players determine how the story unfolds.
@@ -11,9 +15,9 @@ Unity Multiplayer Game(Full presentation) - https://youtu.be/_EdskhqTgnc  (08.03
                 <br>In the game we can create a lobby for 3 players - it is with them that we will make decisions and travel through the game world together.
                 <br>Each player has the opportunity to find unique items during the journey. However, do not worry if your companion has found something interesting! 
                 <br>Everything goes into your common inventory (After all, you have a common goal, right?).
-                <br>In the game there is also a system of notifications (pings), which we can use to let other players know what option we want to vote for. 
+                <br>In the game there is also a system of notifications (pings), which we can use to let other players know what option we want to vote for.<br> 
                 
-<code>2. HOW TO PLAY:</code> <br><br>Required storage 220-300mb. To download the game, press the green button on the main page --> Download ZIP
+<code>2. HOW TO PLAY:</code>
                 <br><br>The preffered resolution is full HD
                 <br><br> If you use Unity Editor: Make sure that your build contains all scenes.
                	<br><br>Open 3 clients simulating each player. Only one player on the same network can host the game and create a lobby.
@@ -32,4 +36,16 @@ Unity Multiplayer Game(Full presentation) - https://youtu.be/_EdskhqTgnc  (08.03
                                    				 ping system etc. Getting familiar with these scripts is crucial in understanding the rules of the game.
                 <br><br>**Main Menu** - It contains scripts describing how players join the game, and deals with relevant UI related to options/exit/lobbies, etc.
                 <br><br>**Network** - It contains scripts related to network aspects such as player definition, adding them to the player list, 
-                          				updating their name, assigning lobby ownership, what happens when a player connects/disconnects from the game, etc.
+                          				updating their name, assigning lobby ownership, what happens when a player connects/disconnects from the game, etc.<br>
+                                  
+<code>4. FAQ: </code>     <br><br>   1. How do I change "localhost" address to my own one?
+                <br><br> Go to Hierarchy - > NetworkManager - > Inspector - > Network Address - > change "localhost" to your own, custom address
+                          <br><br>   2. How do i change the number of players in my lobby?
+                <br><br> Start by changing the number of maximum connections in NetworkManager - > Max Connections - > set up your own number here
+                <br> In LobbyMenu script change the number of UI elements for your players (line 15-17). Don't forget to double-check if UI elements are assigned
+                <br> in Hierarchy - > MainMenu - > Canvas - > LobbyPage - > Inspector
+                          <br><br>   3. How do I move from the lobby to my own GameScene?
+                <br><br> If you wish to keep the lobby system and cut out the rest of the project it is fine! Make sure you delete the second scene and all related scripts
+                <br> used there. Then go to MyNetworkManager - > line 37 - > define how many players are needed to start the game and change the scene name to your own
+                <br> custom scene!
+                <br> <br> FAQ still in progress...

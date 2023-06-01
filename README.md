@@ -1,11 +1,10 @@
 
 # Multiplayer-Text-Game
+Unity version: 2021.3.7f1
 
 Unity Multiplayer Game(Short video) - https://youtu.be/17t1AUGh1BU       (13.04.2023)
 
 Unity Multiplayer Game(Full explanation of game mechanics) - https://youtu.be/_EdskhqTgnc  (08.03.2023)
-
-Download this game from GoogleDrive: https://drive.google.com/file/d/1ATQlBRSxyVqkpJE2LLHPhpZQn9nlihjP/view (1GB of storage required)
 
 Multiplayer lobby system available at Asset Store: waiting for Unity Team to confirm the asset
 

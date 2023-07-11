@@ -115,12 +115,13 @@ private void ClientHandleDisplayNameUpdated(string oldDisplayName, string newDis
 }
 public override void OnStopClient()
 {   
-    ClientOnInfoUpdated?.Invoke();
+     ClientOnInfoUpdated?.Invoke();
     // If we are not the server we do this for everyone:
     if (!isClientOnly) {return; }
     // Here we remove a player from the list of players
     ((MyNetworkManager)NetworkManager.singleton).players.Remove(this);
     // If we are the server we do this for everyone:
+    ClientOnInfoUpdated?.Invoke();
     if (!hasAuthority) { return; }
 }
 

@@ -75,9 +75,11 @@ public class StoryBlock {
                                         // that means that option1 moves to block nr5, option2 moves to block nr 6, option3 moves to block nr 7.
 ////////////////////////////////////////////////////////////////////// LAVA LEVEL ///////////////////////////////////////////////////////////////////////////////
    // Block 0
-////////////////////////////////////////////////////////////////////// OGNISTA KRAINA ////////////////////////////////////////////////////////////////////// // Block 1 new StoryBlock(1, "Czujesz gorące powietrze, które przepływa przez twoje płuca. Ognista kraina testuje twoją wytrzymałość i determinację.", "Badaj otoczenie", "Idź dalej", "Rozmawiaj z drużyną", "", 2, 3, 4),
+////////////////////////////////////////////////////////////////////// OGNISTA KRAINA //////////////////////////////////////////////////////////////////////
+// Block 1 
+new StoryBlock(1, "Czujesz gorące powietrze, które przepływa przez twoje płuca. Ognista kraina testuje twoją wytrzymałość i determinację. Czy ta wyprawa okarze się warta zachodu? Miejmy nadzieje...", "Rozejrzyj się dookoła", "Idź dalej", "Rozmawiaj z innymi", "", 2, 3, 4),
 // Block 2 
-new StoryBlock(2, "Wędrujesz przez żarzące się skały, czując płomienne podmuchy wokół siebie. Jest to niebezpieczne, ale nie możesz się zatrzymać.", "Podążaj naprzód", "Sprawdź, czy jest inna droga", "Porozmawiaj z drużyną", "1", 5, 6, 7),
+new StoryBlock(2, "Wędrujesz przez żarzące się skały, starałeś się ignorować ogniste podmuchy wokół ciebie. Przystajesz na chwilę aby rozejrzeć się dookoła. Miejsce w którym jesteście nie przypomina niczego", "Podążaj naprzód", "Sprawdź, czy jest inna droga", "Porozmawiaj z drużyną", "1", 5, 6, 7),
 // Block 3 
 new StoryBlock(3, "Czujesz, że jesteś coraz bliżej swojego celu. Ognista twierdza musi być tuż za tymi płonącymi wzgórzami.", "Kontynuuj poszukiwania", "Zbadaj okolicę", "Porozmawiaj z drużyną", "2", 8, 9, 10),
 // Block 4 
@@ -89,8 +91,9 @@ new StoryBlock(6, "Przed tobą rozciąga się rozległa dolina ognia, a twierdza
 // Block 7 
 new StoryBlock(7, "Docierasz do bram twierdzy, gdzie płomienie sterczą wokół. Przed tobą otwiera się inny świat - świat tajemnic i niebezpieczeństw.", "Wejdź do twierdzy", "Zbadaj okolicę", "Porozmawiaj z drużyną", "6", 20, 21, 22),
 
-////////////////////////////////////////////////////////////////////// KANAŁY ////////////////////////////////////////////////////////////////////// // Block 8 new StoryBlock(8, "Wchodzisz do mrocznych kanałów, gdzie ciemność otacza cię z każdej strony. Woda jest zimna, a ścieżka wąska.", "Eksploruj kanały", "Wróć na powierzchnię", "Porozmawiaj z drużyną", "", 23, 24, 25),
-
+////////////////////////////////////////////////////////////////////// KANAŁY //////////////////////////////////////////////////////////////////////
+// Block 8 
+new StoryBlock(8, "Wchodzisz do mrocznych kanałów, gdzie ciemność otacza cię z każdej strony. Woda jest zimna, a ścieżka wąska.", "Eksploruj kanały", "Wróć na powierzchnię", "Porozmawiaj z drużyną", "", 23, 24, 25),
 // Block 9 
 new StoryBlock(9, "Kanały są coraz ciaśniejsze i bardziej intrygujące. Czy jesteś gotowy na wyzwania, jakie czekają na ciebie?", "Kontynuuj eksplorację", "Rozważ powrót", "Porozmawiaj z drużyną", "8", 26, 27, 28),
 // Block 10 
@@ -227,5 +230,12 @@ new StoryBlock(33, "Po kilku dniach trudnej podróży docierasz do kryjówki w p
     
      }
     
+  void OnEnable()
+    {     
+          
+          DisplayBlock(storyBlocksList[0]); // When we enable the gameobject that this script is on, we want to display the first story
+                                        // block with our story.
+                                        // Change the zero to another number to display a different story block
+    }   
   
 }
